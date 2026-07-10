@@ -278,7 +278,7 @@ def payment_plans_keyboard(plans: list[dict]) -> InlineKeyboardMarkup:
         rows.append(
             [
                 InlineKeyboardButton(
-                    text=f"💳 {plan['title']} · {plan['price_rub']} ₽",
+                    text=f"{{'start': '🚀', 'content_week': '📅', 'restart': '🔥', 'full_access': '💼', 'premium': '👑'}.get(plan['code'], '💳')} {plan['title']} · {plan['price_rub']} ₽",
                     callback_data=f"payment:buy:{plan['code']}",
                 )
             ]
