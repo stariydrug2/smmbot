@@ -197,7 +197,7 @@ class Settings:
     )
     gemini_text_model: str = field(default_factory=lambda: _first_env('GEMINI_TEXT_MODEL') or 'gemini-3.1-flash-lite')
     openai_text_model: str = field(default_factory=lambda: os.getenv('OPENAI_TEXT_MODEL', 'openai/gpt-5.4-nano'))
-    openai_image_model: str = field(default_factory=lambda: os.getenv('OPENAI_IMAGE_MODEL', 'openai/gpt-image-1.5'))
+    openai_image_model: str = field(default_factory=lambda: os.getenv('OPENAI_IMAGE_MODEL', 'openai/gpt-image-2-5-sunburst'))
     openai_transcribe_model: str = field(default_factory=lambda: os.getenv('OPENAI_TRANSCRIBE_MODEL', 'openai/gpt-4o-mini-transcribe'))
     channel_id: str = field(default_factory=lambda: _first_env('KONTUR_CHANNEL_ID', 'CHANNEL_ID'))
     channel_link: str = field(default_factory=lambda: _first_env('KONTUR_CHANNEL_LINK', 'CHANNEL_LINK'))
